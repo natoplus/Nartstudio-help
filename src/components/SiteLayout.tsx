@@ -1,12 +1,14 @@
 import Link from 'next/link'
 import type { ReactNode } from 'react'
+import ParallaxAtmosphere from './ParallaxAtmosphere'
 
 export default function SiteLayout({ children }: { children: ReactNode }) {
   return (
     <div className="help-site">
+      <ParallaxAtmosphere />
       <a className="skip-link" href="#main-content">Skip to content</a>
       <header className="site-header">
-        <Link className="wordmark" href="/">PYLOTHOUSE <span>HELP CENTRE</span></Link>
+        <Link className="wordmark" href="/"><img src="/brand-mark.svg" alt="" />PYLOTHOUSE <span>HELP CENTRE</span></Link>
         <nav aria-label="Main navigation">
           <Link href="/articles">Help articles</Link>
           <Link href="/contact">Contact support</Link>
